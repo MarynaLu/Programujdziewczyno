@@ -15,7 +15,36 @@ document.addEventListener('DOMContentLoaded', function() {
       
     });
      		dropdown_hidden.style.textAlign = 'center';
-  });
+     		//Task 2 - More buttons interactivity
+     		var buttons = document.querySelectorAll('.read-more');
+
+     		 //buttons[0].addEventListener('click', function() {
+      			//var textArea = this.previousElementSibling;
+      			 //textArea.style.display = 'block';
+      			 //this.innerHTML = 'MNIEJ <span class="glyphicon glyphicon-chevron-up"></span>';
+      		// To powinnaś zobaczyć w konsoli po kliknięciu w pierwszy przycisk
+    		//});
+     		  function showHide() {
+     		  	var textArea = this.previousElementSibling;
+      		if (textArea.style.display === 'none' || textArea.style.display === '') {
+
+        		// ten kod wykona się, gdy spełni się jeden z powyższych warunków
+        		textArea.style.display = 'block';
+        		this.innerHTML = 'MNIEJ <span class="glyphicon glyphicon-chevron-up"></span>';
+     		 } else {
+
+        		// ten kod zadziała, gdy warunek podany w `if` nie będzie spełniony, czyli w przypadku
+        		// gdy `style.display` jesbutnny niż `none` oraz gdy nie jest pusty
+        		textArea.style.display = 'none';
+        		this.innerHTML = 'WIĘCEJ <span class="glyphicon glyphicon-chevron-down"></span>';
+      		}
+
+    		}
+     		  //buttons[0].addEventListener('click', showHide);
+     		     for (var i = 0; i < buttons.length; i++) {
+    				buttons[i].addEventListener('click', showHide);
+  				}
+  			});
 
 //var myName = "Marina";
 //console.log(myName);
