@@ -43,7 +43,13 @@ document.addEventListener('DOMContentLoaded', function() {
      		  //buttons[0].addEventListener('click', showHide);
      		     for (var i = 0; i < buttons.length; i++) {
     				buttons[i].addEventListener('click', showHide);
-  				}
+  				};
+
+  				var menu = document.querySelector(".nav-list");
+  				console.log(menu);
+  				 window.addEventListener('scroll', function() {
+      				 menu.style.borderBottom = '1px solid #696969';
+   				 });
   			});
 
 //var myName = "Marina";
