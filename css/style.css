@@ -308,3 +308,6 @@ footer p {
 .more {
   display: none;
 }
+.button-footer {
+  margin-left: 256%;
+}

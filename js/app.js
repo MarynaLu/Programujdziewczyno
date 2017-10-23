@@ -45,11 +45,19 @@ document.addEventListener('DOMContentLoaded', function() {
     				buttons[i].addEventListener('click', showHide);
   				};
 
+  				//Exercise 3: Adding a border menu on scroll
   				var menu = document.querySelector(".nav-list");
   				console.log(menu);
   				 window.addEventListener('scroll', function() {
       				 menu.style.borderBottom = '1px solid #696969';
    				 });
+   				 //Exercise 4: Adding a go-to-the-top button
+   				 var goTopButton = document.querySelector(".button-footer");
+   				 goTopButton.addEventListener('click', function() {
+   				 	window.scroll(0, 0);
+
+   				 });
+
   			});
 
 //var myName = "Marina";
