@@ -274,6 +274,11 @@ nav {
 
 .slider {
   list-style: none;
+  display: none;
+}
+
+.visible p {
+  display: inline-block;
 }
 
 .dot {
