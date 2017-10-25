@@ -47,15 +47,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
   				//Exercise 3: Adding a border menu on scroll
   				var menu = document.querySelector(".nav-list");
-  				console.log(menu);
   				 window.addEventListener('scroll', function() {
       				 menu.style.borderBottom = '1px solid #696969';
    				 });
-   				 //Exercise 4: Adding a go-to-the-top button
+   				// Exercise 4: Adding a go-to-the-top button
    				 var goTopButton = document.querySelector(".button-footer");
-   				 goTopButton.addEventListener('click', function() {
+   					goTopButton.addEventListener('click', function() {
    				 	window.scroll(0, 0);
 
+   				});
+   				 //Exercise 5: Making organizers slider
+   				var dots = document.querySelectorAll(".dot");
+   				var items = document.querySelectorAll(".org");
+   				 
+
+   				
+   				
+   				dot1.addEventListener('click', function(){
+   					console.log("this works");
+   				 for (var i = 0; i < dots.length; i++){
+   				 	  dots[i].classList.remove('active');
+    				  items[i].classList.remove('visible');
+   				 };
+   				 	this.classList.add("active");
+   				 	items[0].classList.add("visible");
+   				 });
+   				dot2.addEventListener('click', function(){
+   				 for (var i = 0; i < dots.length; i++){
+   				 	  dots[i].classList.remove('active');
+    				  items[i].classList.remove('visible');
+   				 }
+   				 	this.classList.add("active");
+   				 	items[1].classList.add("visible");
+   				});
+   				dot3.addEventListener('click', function(){
+   				 for (var i = 0; i < dots.length; i++){
+   				 	  dots[i].classList.remove('active');
+    				  items[i].classList.remove('visible');
+   				 }
+   				 	this.classList.add("active");
+   				 	items[2].classList.add("visible");
    				 });
 
   			});
